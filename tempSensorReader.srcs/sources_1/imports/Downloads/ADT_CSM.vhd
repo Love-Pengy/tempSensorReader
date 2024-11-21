@@ -3,18 +3,20 @@ use IEEE.STD_LOGIC_1164.ALL;
 -- Change the master stiumales process and don't change the slave situilums, Start signal 2Hz
 --generic (CLOCKFREQ : natural := 100);                    -- input CLK frequency in MHz
 entity ADT_CSM is
-    Port ( MSG_I  : in STD_LOGIC;                           -- signals message
-           STB_I  : in STD_LOGIC;                           --active high which starts an operation
-           A_I    : in  STD_LOGIC_VECTOR (7 downto 0);      --address input bus
-           D_I    : in  STD_LOGIC_VECTOR (7 downto 0);      --data input bus
-           D_O    : inout  STD_LOGIC_VECTOR (7 downto 0);     --data output bus
-           DONE_O : out  STD_LOGIC;                         --done status signal
-           ERR_O  : out  STD_LOGIC;                         --error status
-           CLK    : in std_logic;                           --main clock input
-           SRST   : in std_logic;                           --active high reset signal
-           SDA    : inout std_logic;                        --TWI SDA
-           SCL    : inout std_logic                         --TWI SCL 
-		   );
+    PORT (
+      START : in std_logic;  
+      RESET : in std_logic; 
+      SRST : out std_logic;
+      DATA_OUT : out std_logic_vector(15 downto 0); 
+      CLK : inout std_logic; 
+      STB_I : out std_logic;
+      MSG_I : out std_logic; 
+      A_I : out std_logic_vector(7 downto 0);
+      D_I : out std_logic_vector(7 downto 0);
+      DONE_O : in std_logic;
+      ERR_O : in std_logic;
+      D_O : in std_logic 
+   ); 
 end ADT_CSM;
 
 architecture Behavioral of ADT_CSM is
@@ -24,9 +26,9 @@ architecture Behavioral of ADT_CSM is
 	signal counter : integer := 0;
 	
 	begin
-		clocked : process(clk, SRST)
+		clocked : process(clk, RESET)
 			begin
-				if SRST = '1' then
+				if RESET = '1' then
 					present_state <= INIT;
 					counter <= 0;
 				elsif rising_edge(clk) then
@@ -94,15 +96,7 @@ architecture Behavioral of ADT_CSM is
 
 	
 	output : PROCESS(present_state,counter)
-		BEGIN
-			-- Default signal values
-			MSG_I <= '0';
-			STB_I <= '0';
-			SRST <= '0';  -- Ensure RESET signal aligns with testbench name
-			A_I <= (others => '0');
-			D_I <= (others => '0');
-			LED <= (others => '0');
-		
+		BEGIN	
 			CASE present_state IS
 				WHEN INIT =>
 					A_I <= addrAD2 & write_Bit;
