@@ -1,0 +1,2 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/tempSensorReader-main/tempSensorReader.srcs/sim_1/imports/Downloads/TWICtl_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'TWI_testbench'
