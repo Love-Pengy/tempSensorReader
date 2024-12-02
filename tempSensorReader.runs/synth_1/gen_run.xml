@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1733158533" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ADT_toplevel.dcp">
-  <File Type="PA-TCL" Name="ADT_toplevel.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="ADT_toplevel_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="ADT_toplevel_reports.tcl"/>
-  <File Type="RDS-RDS" Name="ADT_toplevel.vds"/>
-  <File Type="RDS-UTIL" Name="ADT_toplevel_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="ADT_toplevel_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="ADT_toplevel.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1733166585" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ADT_toplevel.dcp">
   <File Type="VDS-TIMINGSUMMARY" Name="ADT_toplevel_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="ADT_toplevel.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="ADT_toplevel_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="ADT_toplevel_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="ADT_toplevel_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="ADT_toplevel.vds"/>
+  <File Type="REPORTS-TCL" Name="ADT_toplevel_reports.tcl"/>
   <File Type="VDS-TIMING-PB" Name="ADT_toplevel_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="ADT_toplevel.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/Downloads/ADT_CSM.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../frazierb2/Downloads/ADT_CSM.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../frazierb2/Downloads/ADT_CSM.vhd"/>
         <Attr Name="ImportTime" Val="1732038875"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -27,7 +27,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/Downloads/TWICtl.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../frazierb2/Downloads/TWICtl.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../frazierb2/Downloads/TWICtl.vhd"/>
         <Attr Name="ImportTime" Val="1732038876"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -42,7 +42,6 @@
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="ADT_toplevel"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -72,7 +71,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

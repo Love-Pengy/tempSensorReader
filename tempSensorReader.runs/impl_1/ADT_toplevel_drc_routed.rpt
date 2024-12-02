@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Mon Dec  2 12:00:53 2024
-| Host         : GOSU running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Mon Dec  2 14:12:14 2024
+| Host         : Jake running 64-bit Linux Mint 22
 | Command      : report_drc -file ADT_toplevel_drc_routed.rpt -pb ADT_toplevel_drc_routed.pb -rpx ADT_toplevel_drc_routed.rpx
 | Design       : ADT_toplevel
 | Device       : xc7a100tcsg324-1
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 11
+             Violations found: 6
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| PDRC-153 | Warning  | Gated clock check                                   | 10         |
+| PDRC-153 | Warning  | Gated clock check                                   | 5          |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -49,50 +49,25 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net ADT/A_I_reg[0]_i_1_n_0 is a gated clock net sourced by a combinational pin ADT/A_I_reg[0]_i_1/O, cell ADT/A_I_reg[0]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net ADT/DATA_OUT_reg[15]_i_1_n_0 is a gated clock net sourced by a combinational pin ADT/DATA_OUT_reg[15]_i_1/O, cell ADT/DATA_OUT_reg[15]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net ADT/DATA_OUT_reg[15]_i_1_n_0 is a gated clock net sourced by a combinational pin ADT/DATA_OUT_reg[15]_i_1/O, cell ADT/DATA_OUT_reg[15]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net ADT/next_state[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin ADT/next_state[0]_LDC_i_1/O, cell ADT/next_state[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net ADT/DATA_OUT_reg[7]_i_1_n_0 is a gated clock net sourced by a combinational pin ADT/DATA_OUT_reg[7]_i_1/O, cell ADT/DATA_OUT_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net ADT/next_state[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin ADT/next_state[1]_LDC_i_1/O, cell ADT/next_state[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net ADT/MSG_I_reg_i_1_n_0 is a gated clock net sourced by a combinational pin ADT/MSG_I_reg_i_1/O, cell ADT/MSG_I_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#5 Warning
-Gated clock check  
-Net ADT/SRST_reg_i_2_n_0 is a gated clock net sourced by a combinational pin ADT/SRST_reg_i_2/O, cell ADT/SRST_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#6 Warning
-Gated clock check  
-Net ADT/STB_I_reg_i_2_n_0 is a gated clock net sourced by a combinational pin ADT/STB_I_reg_i_2/O, cell ADT/STB_I_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#7 Warning
-Gated clock check  
-Net ADT/next_state[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin ADT/next_state[0]_LDC_i_1/O, cell ADT/next_state[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#8 Warning
-Gated clock check  
-Net ADT/next_state[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin ADT/next_state[1]_LDC_i_1/O, cell ADT/next_state[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#9 Warning
-Gated clock check  
 Net ADT/next_state[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin ADT/next_state[2]_LDC_i_1/O, cell ADT/next_state[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
-PDRC-153#10 Warning
+PDRC-153#5 Warning
 Gated clock check  
 Net ADT/next_state[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin ADT/next_state[3]_LDC_i_1/O, cell ADT/next_state[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>

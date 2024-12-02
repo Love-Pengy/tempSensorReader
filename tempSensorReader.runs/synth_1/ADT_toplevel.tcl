@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.runs/synth_1/ADT_toplevel.tcl"
+  variable script "/home/bee/Projects/tempSensorReader/tempSensorReader.runs/synth_1/ADT_toplevel.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,27 +56,26 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
-set_param xicom.use_bs_reader 1
+set_param chipscope.maxJobs 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.xpr} [current_project]
+set_property webtalk.parent_dir /home/bee/Projects/tempSensorReader/tempSensorReader.cache/wt [current_project]
+set_property parent.project_path /home/bee/Projects/tempSensorReader/tempSensorReader.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo {c:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.cache/ip} [current_project]
+set_property ip_output_repo /home/bee/Projects/tempSensorReader/tempSensorReader.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  {C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_CSM.vhd}
-  {C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/clock_divider.vhd}
-  {C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd}
-  {C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_toplevel_skeleton.vhd}
+  /home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_CSM.vhd
+  /home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/clock_divider.vhd
+  /home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd
+  /home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_toplevel_skeleton.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -87,12 +86,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/Nexys4DDR_Master_skeleton.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/Nexys4DDR_Master_skeleton.xdc}}]
+read_xdc /home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/Nexys4DDR_Master_skeleton.xdc
+set_property used_in_implementation false [get_files /home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/Nexys4DDR_Master_skeleton.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental {C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/utils_1/imports/synth_1/ADT_toplevel.dcp}
+read_checkpoint -auto_incremental -incremental /home/bee/Projects/tempSensorReader/tempSensorReader.srcs/utils_1/imports/synth_1/ADT_toplevel.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

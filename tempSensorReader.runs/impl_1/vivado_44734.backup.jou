@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Dec  2 14:10:58 2024
+# Process ID: 44734
+# Current directory: /home/bee/Projects/tempSensorReader/tempSensorReader.runs/impl_1
+# Command line: vivado -log ADT_toplevel.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ADT_toplevel.tcl -notrace
+# Log file: /home/bee/Projects/tempSensorReader/tempSensorReader.runs/impl_1/ADT_toplevel.vdi
+# Journal file: /home/bee/Projects/tempSensorReader/tempSensorReader.runs/impl_1/vivado.jou
+# Running On        :Jake
+# Platform          :Linuxmint
+# Operating System  :Linux Mint 22
+# Processor Detail  :Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz
+# CPU Frequency     :2800.125 MHz
+# CPU Physical cores:2
+# CPU Logical cores :4
+# Host memory       :12258 MB
+# Swap memory       :2147 MB
+# Total Virtual     :14406 MB
+# Available Virtual :10914 MB
+#-----------------------------------------------------------
+source ADT_toplevel.tcl -notrace

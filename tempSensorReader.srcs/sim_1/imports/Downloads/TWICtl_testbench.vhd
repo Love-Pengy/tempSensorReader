@@ -149,7 +149,7 @@ architecture behavior of TWI_testbench is
 		waitclocks(SCL_sig, 1);
 		SDA_sig <= 'H';
 		waitclocks(SCL_sig, 1);
-		SDA_sig <= 'H';  -- change from H to 0
+		SDA_sig <= '0';  -- change from H to 0
 		waitclocks(SCL_sig, 1);
 		SDA_sig <= '0';
 		waitclocks(SCL_sig, 1);

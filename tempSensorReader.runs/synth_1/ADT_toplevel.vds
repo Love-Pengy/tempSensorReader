@@ -1,30 +1,30 @@
 #-----------------------------------------------------------
 # Vivado v2024.1 (64-bit)
-# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Dec  2 11:55:38 2024
-# Process ID: 20280
-# Current directory: C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.runs/synth_1
-# Command line: vivado.exe -log ADT_toplevel.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ADT_toplevel.tcl
-# Log file: C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.runs/synth_1/ADT_toplevel.vds
-# Journal file: C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.runs/synth_1\vivado.jou
-# Running On        :GOSU
-# Platform          :Windows Server 2016 or Windows 10
-# Operating System  :22631
-# Processor Detail  :12th Gen Intel(R) Core(TM) i7-1260P
-# CPU Frequency     :2496 MHz
-# CPU Physical cores:12
-# CPU Logical cores :16
-# Host memory       :16774 MB
-# Swap memory       :18253 MB
-# Total Virtual     :35027 MB
-# Available Virtual :10854 MB
+# Start of session at: Mon Dec  2 14:09:49 2024
+# Process ID: 44365
+# Current directory: /home/bee/Projects/tempSensorReader/tempSensorReader.runs/synth_1
+# Command line: vivado -log ADT_toplevel.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ADT_toplevel.tcl
+# Log file: /home/bee/Projects/tempSensorReader/tempSensorReader.runs/synth_1/ADT_toplevel.vds
+# Journal file: /home/bee/Projects/tempSensorReader/tempSensorReader.runs/synth_1/vivado.jou
+# Running On        :Jake
+# Platform          :Linuxmint
+# Operating System  :Linux Mint 22
+# Processor Detail  :Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz
+# CPU Frequency     :2799.987 MHz
+# CPU Physical cores:2
+# CPU Logical cores :4
+# Host memory       :12258 MB
+# Swap memory       :2147 MB
+# Total Virtual     :14406 MB
+# Available Virtual :10754 MB
 #-----------------------------------------------------------
 source ADT_toplevel.tcl -notrace
-create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 530.574 ; gain = 198.324
-Command: read_checkpoint -auto_incremental -incremental {C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/utils_1/imports/synth_1/ADT_toplevel.dcp}
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/utils_1/imports/synth_1/ADT_toplevel.dcp for incremental synthesis
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1416.863 ; gain = 0.027 ; free physical = 1664 ; free virtual = 10033
+Command: read_checkpoint -auto_incremental -incremental /home/bee/Projects/tempSensorReader/tempSensorReader.srcs/utils_1/imports/synth_1/ADT_toplevel.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/bee/Projects/tempSensorReader/tempSensorReader.srcs/utils_1/imports/synth_1/ADT_toplevel.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top ADT_toplevel -part xc7a100tcsg324-1
 Starting synth_design
@@ -32,90 +32,91 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Device 21-9227] Part: xc7a100tcsg324-1 does not have CEAM library.
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 36216
+INFO: [Synth 8-7075] Helper process launched with PID 44410
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1402.035 ; gain = 448.004
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2143.555 ; gain = 412.715 ; free physical = 645 ; free virtual = 9014
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'ADT_toplevel' [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_toplevel_skeleton.vhd:35]
-INFO: [Synth 8-113] binding component instance 'PULLUP_SDA' to cell 'PULLUP' [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_toplevel_skeleton.vhd:67]
-INFO: [Synth 8-113] binding component instance 'PULLUP_SCL' to cell 'PULLUP' [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_toplevel_skeleton.vhd:68]
-INFO: [Synth 8-638] synthesizing module 'clock_divider' [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/clock_divider.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'clock_divider' (0#1) [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/clock_divider.vhd:15]
-INFO: [Synth 8-638] synthesizing module 'ADT_CSM' [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_CSM.vhd:20]
-WARNING: [Synth 8-614] signal 'START' is read in the process but is not in the sensitivity list [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_CSM.vhd:32]
-WARNING: [Synth 8-614] signal 'DONE_O' is read in the process but is not in the sensitivity list [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_CSM.vhd:47]
-WARNING: [Synth 8-614] signal 'D_O' is read in the process but is not in the sensitivity list [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_CSM.vhd:104]
-INFO: [Synth 8-256] done synthesizing module 'ADT_CSM' (0#1) [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_CSM.vhd:20]
-INFO: [Synth 8-638] synthesizing module 'TWICtl' [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd:87]
-INFO: [Synth 8-226] default block is never used [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd:308]
-INFO: [Synth 8-226] default block is never used [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd:341]
-INFO: [Synth 8-226] default block is never used [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd:359]
-INFO: [Synth 8-226] default block is never used [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd:377]
-INFO: [Synth 8-226] default block is never used [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd:395]
-INFO: [Synth 8-256] done synthesizing module 'TWICtl' (0#1) [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd:87]
-INFO: [Synth 8-256] done synthesizing module 'ADT_toplevel' (0#1) [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_toplevel_skeleton.vhd:35]
-WARNING: [Synth 8-6014] Unused sequential element timeOutCnt_reg was removed.  [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd:214]
-WARNING: [Synth 8-6014] Unused sequential element errTypeR_reg was removed.  [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd:291]
+INFO: [Synth 8-638] synthesizing module 'ADT_toplevel' [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_toplevel_skeleton.vhd:35]
+INFO: [Synth 8-113] binding component instance 'PULLUP_SDA' to cell 'PULLUP' [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_toplevel_skeleton.vhd:67]
+INFO: [Synth 8-113] binding component instance 'PULLUP_SCL' to cell 'PULLUP' [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_toplevel_skeleton.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'clock_divider' [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/clock_divider.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'clock_divider' (0#1) [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/clock_divider.vhd:15]
+INFO: [Synth 8-638] synthesizing module 'ADT_CSM' [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_CSM.vhd:22]
+WARNING: [Synth 8-614] signal 'START' is read in the process but is not in the sensitivity list [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_CSM.vhd:34]
+WARNING: [Synth 8-614] signal 'DONE_O' is read in the process but is not in the sensitivity list [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_CSM.vhd:50]
+WARNING: [Synth 8-614] signal 'D_O' is read in the process but is not in the sensitivity list [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_CSM.vhd:107]
+INFO: [Synth 8-256] done synthesizing module 'ADT_CSM' (0#1) [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_CSM.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'TWICtl' [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd:87]
+INFO: [Synth 8-226] default block is never used [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd:308]
+INFO: [Synth 8-226] default block is never used [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd:341]
+INFO: [Synth 8-226] default block is never used [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd:359]
+INFO: [Synth 8-226] default block is never used [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd:377]
+INFO: [Synth 8-226] default block is never used [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd:395]
+INFO: [Synth 8-256] done synthesizing module 'TWICtl' (0#1) [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd:87]
+INFO: [Synth 8-256] done synthesizing module 'ADT_toplevel' (0#1) [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_toplevel_skeleton.vhd:35]
+WARNING: [Synth 8-6014] Unused sequential element timeOutCnt_reg was removed.  [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd:214]
+WARNING: [Synth 8-6014] Unused sequential element errTypeR_reg was removed.  [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/TWICtl.vhd:291]
 WARNING: [Synth 8-7129] Port ERR_O in module ADT_CSM is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SCL_ALT_IN in module ADT_toplevel is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SDA_ALT_IN in module ADT_toplevel is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1518.113 ; gain = 564.082
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2223.523 ; gain = 492.684 ; free physical = 550 ; free virtual = 8921
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1518.113 ; gain = 564.082
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2238.367 ; gain = 507.527 ; free physical = 547 ; free virtual = 8917
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1518.113 ; gain = 564.082
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2238.367 ; gain = 507.527 ; free physical = 547 ; free virtual = 8917
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1518.113 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2241.336 ; gain = 0.000 ; free physical = 543 ; free virtual = 8913
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/Nexys4DDR_Master_skeleton.xdc]
-Finished Parsing XDC File [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/Nexys4DDR_Master_skeleton.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/Nexys4DDR_Master_skeleton.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ADT_toplevel_propImpl.xdc].
+Parsing XDC File [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/Nexys4DDR_Master_skeleton.xdc]
+Finished Parsing XDC File [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/Nexys4DDR_Master_skeleton.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/Nexys4DDR_Master_skeleton.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ADT_toplevel_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/ADT_toplevel_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1620.883 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2386.117 ; gain = 0.000 ; free physical = 530 ; free virtual = 8900
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1620.883 ; gain = 0.000
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2386.117 ; gain = 0.000 ; free physical = 530 ; free virtual = 8900
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:35 . Memory (MB): peak = 1620.883 ; gain = 666.852
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2386.117 ; gain = 655.277 ; free physical = 529 ; free virtual = 8900
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:35 . Memory (MB): peak = 1620.883 ; gain = 666.852
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2386.117 ; gain = 655.277 ; free physical = 529 ; free virtual = 8900
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:35 . Memory (MB): peak = 1620.883 ; gain = 666.852
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2386.117 ; gain = 655.277 ; free physical = 529 ; free virtual = 8900
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint /home/bee/Projects/tempSensorReader/tempSensorReader.srcs/utils_1/imports/synth_1/ADT_toplevel.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2386.117 ; gain = 655.277 ; free physical = 528 ; free virtual = 8899
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2386.117 ; gain = 655.277 ; free physical = 528 ; free virtual = 8899
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'TWICtl'
-WARNING: [Synth 8-327] inferring latch for variable 'SRST_reg' [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_CSM.vhd:110]
-WARNING: [Synth 8-327] inferring latch for variable 'DATA_OUT_reg' [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_CSM.vhd:124]
-WARNING: [Synth 8-327] inferring latch for variable 'STB_I_reg' [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_CSM.vhd:109]
-WARNING: [Synth 8-327] inferring latch for variable 'MSG_I_reg' [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_CSM.vhd:108]
-WARNING: [Synth 8-327] inferring latch for variable 'A_I_reg' [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_CSM.vhd:111]
-WARNING: [Synth 8-327] inferring latch for variable 'D_I_reg' [C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_CSM.vhd:112]
+WARNING: [Synth 8-327] inferring latch for variable 'DATA_OUT_reg' [/home/bee/Projects/tempSensorReader/tempSensorReader.srcs/sources_1/imports/Downloads/ADT_CSM.vhd:133]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -131,25 +132,36 @@ WARNING: [Synth 8-327] inferring latch for variable 'D_I_reg' [C:/Users/eoppo/Do
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'gray' in module 'TWICtl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:36 . Memory (MB): peak = 1620.883 ; gain = 666.852
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2386.117 ; gain = 655.277 ; free physical = 528 ; free virtual = 8899
 ---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   25 Bit       Adders := 1     
+	   2 Input   18 Bit       Adders := 1     
 	   2 Input    3 Bit       Adders := 1     
 	   2 Input    2 Bit       Adders := 1     
 +---Registers : 
-	               25 Bit    Registers := 1     
+	               18 Bit    Registers := 1     
 	                8 Bit    Registers := 2     
 	                4 Bit    Registers := 2     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 11    
 +---Muxes : 
-	   7 Input   16 Bit        Muxes := 1     
+	  10 Input   16 Bit        Muxes := 1     
+	  10 Input    8 Bit        Muxes := 1     
 	   2 Input    8 Bit        Muxes := 2     
 	   2 Input    4 Bit        Muxes := 11    
 	   3 Input    4 Bit        Muxes := 2     
@@ -159,7 +171,7 @@ Detailed RTL Component Info :
 	   2 Input    2 Bit        Muxes := 1     
 	   3 Input    2 Bit        Muxes := 1     
 	   9 Input    1 Bit        Muxes := 2     
-	   7 Input    1 Bit        Muxes := 7     
+	  10 Input    1 Bit        Muxes := 3     
 	   2 Input    1 Bit        Muxes := 21    
 	   4 Input    1 Bit        Muxes := 20    
 	   3 Input    1 Bit        Muxes := 4     
@@ -181,33 +193,30 @@ Start Cross Boundary and Area Optimization
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-7129] Port SCL_ALT_IN in module ADT_toplevel is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SDA_ALT_IN in module ADT_toplevel is either unconnected or has no load
-WARNING: [Synth 8-3332] Sequential element (ADT/A_I_reg[7]) is unused and will be removed from module ADT_toplevel.
-WARNING: [Synth 8-3332] Sequential element (ADT/A_I_reg[6]) is unused and will be removed from module ADT_toplevel.
-WARNING: [Synth 8-3332] Sequential element (ADT/D_I_reg[7]) is unused and will be removed from module ADT_toplevel.
 WARNING: [Synth 8-3332] Sequential element (ADT/next_state[3]_C) is unused and will be removed from module ADT_toplevel.
 WARNING: [Synth 8-3332] Sequential element (ADT/next_state[2]_P) is unused and will be removed from module ADT_toplevel.
 WARNING: [Synth 8-3332] Sequential element (ADT/next_state[1]_C) is unused and will be removed from module ADT_toplevel.
 WARNING: [Synth 8-3332] Sequential element (ADT/next_state[0]_P) is unused and will be removed from module ADT_toplevel.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:43 . Memory (MB): peak = 1620.883 ; gain = 666.852
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2386.117 ; gain = 655.277 ; free physical = 504 ; free virtual = 8880
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:58 . Memory (MB): peak = 1620.883 ; gain = 666.852
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2386.117 ; gain = 655.277 ; free physical = 504 ; free virtual = 8880
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:59 . Memory (MB): peak = 1620.883 ; gain = 666.852
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2386.117 ; gain = 655.277 ; free physical = 504 ; free virtual = 8880
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:59 . Memory (MB): peak = 1620.883 ; gain = 666.852
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 2386.117 ; gain = 655.277 ; free physical = 504 ; free virtual = 8880
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -225,37 +234,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:01:10 . Memory (MB): peak = 1620.883 ; gain = 666.852
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 2386.117 ; gain = 655.277 ; free physical = 504 ; free virtual = 8880
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:01:10 . Memory (MB): peak = 1620.883 ; gain = 666.852
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 2386.117 ; gain = 655.277 ; free physical = 504 ; free virtual = 8880
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:01:10 . Memory (MB): peak = 1620.883 ; gain = 666.852
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 2386.117 ; gain = 655.277 ; free physical = 504 ; free virtual = 8880
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:01:11 . Memory (MB): peak = 1620.883 ; gain = 666.852
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 2386.117 ; gain = 655.277 ; free physical = 504 ; free virtual = 8880
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:01:11 . Memory (MB): peak = 1620.883 ; gain = 666.852
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 2386.117 ; gain = 655.277 ; free physical = 504 ; free virtual = 8880
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:01:11 . Memory (MB): peak = 1620.883 ; gain = 666.852
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 2386.117 ; gain = 655.277 ; free physical = 504 ; free virtual = 8880
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -272,49 +281,52 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    45|
+|2     |CARRY4 |    44|
 |3     |LUT1   |    43|
-|4     |LUT2   |   203|
-|5     |LUT3   |     7|
-|6     |LUT4   |    17|
-|7     |LUT5   |    21|
-|8     |LUT6   |    45|
+|4     |LUT2   |   207|
+|5     |LUT3   |     9|
+|6     |LUT4   |    10|
+|7     |LUT5   |    19|
+|8     |LUT6   |    42|
 |9     |PULLUP |     2|
 |10    |FDCE   |    39|
 |11    |FDPE   |     2|
-|12    |FDRE   |    79|
+|12    |FDRE   |    72|
 |13    |FDSE   |    17|
-|14    |LD     |    20|
+|14    |LD     |    16|
 |15    |LDC    |     4|
 |16    |IBUF   |     2|
 |17    |IOBUF  |     2|
 |18    |OBUF   |    18|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:01:11 . Memory (MB): peak = 1620.883 ; gain = 666.852
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 2386.117 ; gain = 655.277 ; free physical = 504 ; free virtual = 8880
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:01:06 . Memory (MB): peak = 1620.883 ; gain = 564.082
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:01:11 . Memory (MB): peak = 1620.883 ; gain = 666.852
+Synthesis finished with 0 errors, 1 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2386.117 ; gain = 507.527 ; free physical = 504 ; free virtual = 8880
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 2386.125 ; gain = 655.277 ; free physical = 504 ; free virtual = 8880
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1620.883 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 71 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2386.125 ; gain = 0.000 ; free physical = 504 ; free virtual = 8880
+INFO: [Netlist 29-17] Analyzing 66 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1620.883 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2386.125 ; gain = 0.000 ; free physical = 821 ; free virtual = 9197
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 26 instances were transformed.
+  A total of 22 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
-  LD => LDCE: 20 instances
+  LD => LDCE: 16 instances
   LDC => LDCE: 4 instances
 
-Synth Design complete | Checksum: 7158dbb7
+Synth Design complete | Checksum: 6dc94a67
 INFO: [Common 17-83] Releasing license: Synthesis
-39 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
+36 Infos, 16 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:01:22 . Memory (MB): peak = 1620.883 ; gain = 1085.797
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1620.883 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader-main/tempSensorReader.runs/synth_1/ADT_toplevel.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:37 . Memory (MB): peak = 2386.125 ; gain = 969.262 ; free physical = 821 ; free virtual = 9197
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1954.317; main = 1580.329; forked = 422.572
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3419.594; main = 2386.121; forked = 1033.473
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2410.129 ; gain = 0.000 ; free physical = 821 ; free virtual = 9197
+INFO: [Common 17-1381] The checkpoint '/home/bee/Projects/tempSensorReader/tempSensorReader.runs/synth_1/ADT_toplevel.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file ADT_toplevel_utilization_synth.rpt -pb ADT_toplevel_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Dec  2 11:57:15 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  2 14:10:40 2024...

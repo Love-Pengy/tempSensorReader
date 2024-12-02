@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Mon Dec  2 12:00:18 2024
-| Host         : GOSU running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Mon Dec  2 14:11:43 2024
+| Host         : Jake running 64-bit Linux Mint 22
 | Command      : report_control_sets -verbose -file ADT_toplevel_control_sets_placed.rpt
 | Design       : ADT_toplevel
 | Device       : xc7a100t
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    24 |
-|    Minimum number of control sets                        |    24 |
+| Total control sets                                       |    20 |
+|    Minimum number of control sets                        |    20 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |   135 |
+| Unused register locations in slices containing registers |   106 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,8 +39,8 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    24 |
-| >= 0 to < 4        |    14 |
+| Total control sets |    20 |
+| >= 0 to < 4        |    10 |
 | >= 4 to < 6        |     3 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     3 |
@@ -58,9 +58,9 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              37 |           20 |
-| No           | No                    | Yes                    |              41 |           17 |
-| No           | Yes                   | No                     |              62 |           20 |
+| No           | No                    | No                     |              33 |           13 |
+| No           | No                    | Yes                    |              41 |           16 |
+| No           | Yes                   | No                     |              55 |           19 |
 | Yes          | No                    | No                     |               8 |            4 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |              13 |            4 |
@@ -70,33 +70,29 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------------------------+----------------------------------+-------------------------------+------------------+----------------+--------------+
-|          Clock Signal          |           Enable Signal          |        Set/Reset Signal       | Slice Load Count | Bel Load Count | Bels / Slice |
-+--------------------------------+----------------------------------+-------------------------------+------------------+----------------+--------------+
-|  ADT/next_state[2]_LDC_i_1_n_0 |                                  | ADT/next_state[2]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
-|  ADT/next_state[3]_LDC_i_1_n_0 |                                  | ADT/next_state[3]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
-| ~TWICtl/DONE_O                 |                                  | ADT/next_state[2]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
-| ~TWICtl/DONE_O                 |                                  | ADT/next_state[3]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
-| ~TWICtl/DONE_O                 |                                  | ADT/reset_counter_i_1_n_0     |                1 |              1 |         1.00 |
-| ~TWICtl/DONE_O                 |                                  | ADT/next_state[0]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
-| ~TWICtl/DONE_O                 |                                  | ADT/next_state[1]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
-|  SYS_CLK_IBUF_BUFG             |                                  | TWICtl/iDone19_out            |                1 |              1 |         1.00 |
-|  ADT/A_I_reg[0]_i_1_n_0        |                                  |                               |                1 |              1 |         1.00 |
-|  ADT/MSG_I_reg_i_1_n_0         |                                  |                               |                1 |              1 |         1.00 |
-|  ADT/SRST_reg_i_2_n_0          |                                  |                               |                1 |              1 |         1.00 |
-|  ADT/STB_I_reg_i_2_n_0         |                                  |                               |                1 |              1 |         1.00 |
-|  ADT/next_state[0]_LDC_i_1_n_0 |                                  | ADT/next_state[0]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
-|  ADT/next_state[1]_LDC_i_1_n_0 |                                  | ADT/next_state[1]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
-|  SYS_CLK_IBUF_BUFG             | TWICtl/FSM_gray_state[3]_i_1_n_0 |                               |                2 |              4 |         2.00 |
-|  SYS_CLK_IBUF_BUFG             | TWICtl/dataByte[6]_i_1_n_0       |                               |                2 |              4 |         2.00 |
-|  SYS_CLK_IBUF_BUFG             | TWICtl/dataByte[6]_i_1_n_0       | TWICtl/dataByte[7]_i_1_n_0    |                1 |              4 |         4.00 |
-|  ADT/DATA_OUT_reg[15]_i_1_n_0  |                                  |                               |                3 |              8 |         2.67 |
-|  ADT/DATA_OUT_reg[7]_i_1_n_0   |                                  |                               |                3 |              8 |         2.67 |
-|  SYS_CLK_IBUF_BUFG             | TWICtl/sclCnt[0]_i_2_n_0         | TWICtl/sclCnt0                |                3 |              9 |         3.00 |
-|  SYS_CLK_IBUF_BUFG             |                                  |                               |               10 |             17 |         1.70 |
-|  SYS_CLK_IBUF_BUFG             |                                  | CLK_DIV/sclki                 |                7 |             25 |         3.57 |
-|  SYS_CLK_IBUF_BUFG             |                                  | TWICtl/busFreeCnt0            |                8 |             32 |         4.00 |
-|  SYS_CLK_IBUF_BUFG             |                                  | CLK_DIV/sclki_reg_0           |               12 |             36 |         3.00 |
-+--------------------------------+----------------------------------+-------------------------------+------------------+----------------+--------------+
++--------------------------------+----------------------------------+--------------------------------+------------------+----------------+--------------+
+|          Clock Signal          |           Enable Signal          |        Set/Reset Signal        | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------+----------------------------------+--------------------------------+------------------+----------------+--------------+
+|  ADT/next_state[2]_LDC_i_1_n_0 |                                  | ADT/next_state[2]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  ADT/next_state[0]_LDC_i_1_n_0 |                                  | ADT/next_state[0]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+| ~TWICtl/DONE_O                 |                                  | ADT/next_state[0]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+| ~TWICtl/DONE_O                 |                                  | ADT/next_state[2]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+| ~TWICtl/DONE_O                 |                                  | ADT/reset_counter_i_1_n_0      |                1 |              1 |         1.00 |
+|  SYS_CLK_IBUF_BUFG             |                                  | TWICtl/iDone19_out             |                1 |              1 |         1.00 |
+| ~TWICtl/DONE_O                 |                                  | ADT/next_state[3]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+| ~TWICtl/DONE_O                 |                                  | ADT/next_state[1]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+|  ADT/next_state[3]_LDC_i_1_n_0 |                                  | ADT/next_state[3]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  ADT/next_state[1]_LDC_i_1_n_0 |                                  | ADT/next_state[1]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  SYS_CLK_IBUF_BUFG             | TWICtl/dataByte[6]_i_1_n_0       | TWICtl/FSM_gray_state_reg[2]_0 |                1 |              4 |         4.00 |
+|  SYS_CLK_IBUF_BUFG             | TWICtl/dataByte[6]_i_1_n_0       |                                |                2 |              4 |         2.00 |
+|  SYS_CLK_IBUF_BUFG             | TWICtl/FSM_gray_state[3]_i_1_n_0 |                                |                2 |              4 |         2.00 |
+|  ADT/present_state_reg_n_0_[3] |                                  |                                |                2 |              8 |         4.00 |
+|  ADT/DATA_OUT_reg[15]_i_1_n_0  |                                  |                                |                2 |              8 |         4.00 |
+|  SYS_CLK_IBUF_BUFG             | TWICtl/sclCnt[0]_i_2_n_0         | TWICtl/sclCnt0                 |                3 |              9 |         3.00 |
+|  SYS_CLK_IBUF_BUFG             |                                  |                                |                9 |             17 |         1.89 |
+|  SYS_CLK_IBUF_BUFG             |                                  | CLK_DIV/sclki                  |                6 |             18 |         3.00 |
+|  SYS_CLK_IBUF_BUFG             |                                  | TWICtl/busFreeCnt0             |                8 |             32 |         4.00 |
+|  SYS_CLK_IBUF_BUFG             |                                  | CLK_DIV/sclki_reg_0            |               11 |             36 |         3.27 |
++--------------------------------+----------------------------------+--------------------------------+------------------+----------------+--------------+
 
 

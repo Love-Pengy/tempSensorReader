@@ -1,5 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+-- Change the master stiumales process and don't change the slave situilums, Start signal 2Hz
+--generic (CLOCKFREQ : natural := 100);                    -- input CLK frequency in MHz
 entity ADT_CSM is
     PORT (
       START : in std_logic;  
@@ -44,6 +46,7 @@ architecture Behavioral of ADT_CSM is
 				end if;
 	end process clocked;
 	
+	
 	nextstate : PROCESS(present_state,counter)
 		BEGIN
 		  reset_counter <= '0';
@@ -78,40 +81,39 @@ architecture Behavioral of ADT_CSM is
 					END IF;
 							
 				WHEN START_READ_OPERATION =>
-				     next_state <= START_READ_OPERATION;
+				    next_state <= START_READ_OPERATION;
 				    IF DONE_O'event AND DONE_O = '0' THEN
 					        next_state <= WAIT_READ_DONE_MSB;
 					        reset_counter <= '1';
-				    end if;
+					end if;
 				WHEN WAIT_READ_DONE_MSB =>
 				    IF counter >= 510  THEN
 						next_state <= LOAD_MSB;
 						reset_counter <= '1';
-					else
+				    else
 				        next_state <= WAIT_READ_DONE_MSB;
 				    end if;
 				WHEN LOAD_MSB =>
 					next_state <= WAIT_READ_DONE_LSB;
 				WHEN WAIT_READ_DONE_LSB =>
-				 next_state <= WAIT_READ_DONE_LSB;
-				IF DONE_O'event AND DONE_O = '0' THEN
-				        next_state <= LOAD_LSB;
-				end if;			
+				      next_state <= WAIT_READ_DONE_LSB;
+                      IF DONE_O'event AND DONE_O = '0' THEN
+                        next_state <= LOAD_LSB;
+					  end if;			
 		        WHEN others => 
 			END CASE;
 	END PROCESS nextstate;
 
 	output : PROCESS(present_state,counter)
-		BEGIN	
-		
+		BEGIN
+		    MSG_I <= '0';
+            STB_I <= '0';
+            SRST <= '0';
+            A_I <= addrAD2 & write_bit;
+            D_I <= B"0000_0000";
 			CASE present_state IS
 				WHEN INIT =>
-				   MSG_I <= '0';
-				    STB_I <= '0';
-				    SRST <= '0';
-				    A_I <= addrAD2 & write_bit;
-				     D_I <= B"0000_0000";
-				 When RESET_ACTIVATE =>
+				WHEN RESET_ACTIVATE =>
 					SRST <= '1';
 				WHEN RESET_DEACTIVATE =>
 					SRST <= '0';
@@ -120,13 +122,18 @@ architecture Behavioral of ADT_CSM is
 					MSG_I <= '1';
 					STB_I <= '1';
 				WHEN START_READ_OPERATION =>
+					A_I <= addrAD2 & read_Bit;
+			        STB_I <= '1';
 					MSG_I <= '0';
+			    WHEN WAIT_READ_DONE_MSB =>
+			        A_I <= addrAD2 & read_Bit;
+			        STB_I <= '1';
 				WHEN LOAD_MSB =>
 				    STB_I <= '0';
 					DATA_OUT(15 downto 8) <= D_O;
+		        WHEN WAIT_READ_DONE_LSB =>
 				WHEN LOAD_LSB =>
 					DATA_OUT(7 downto 0) <= D_O;   
-			    WHEN OTHERS => 
 			END CASE;
 	END PROCESS output;
 	
