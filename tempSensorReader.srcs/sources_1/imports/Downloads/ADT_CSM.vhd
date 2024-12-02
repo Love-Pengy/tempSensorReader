@@ -1,7 +1,5 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
--- Change the master stiumales process and don't change the slave situilums, Start signal 2Hz
---generic (CLOCKFREQ : natural := 100);                    -- input CLK frequency in MHz
 entity ADT_CSM is
     PORT (
       START : in std_logic;  
@@ -46,7 +44,6 @@ architecture Behavioral of ADT_CSM is
 				end if;
 	end process clocked;
 	
-	
 	nextstate : PROCESS(present_state,counter)
 		BEGIN
 		  reset_counter <= '0';
@@ -81,41 +78,40 @@ architecture Behavioral of ADT_CSM is
 					END IF;
 							
 				WHEN START_READ_OPERATION =>
+				     next_state <= START_READ_OPERATION;
 				    IF DONE_O'event AND DONE_O = '0' THEN
 					        next_state <= WAIT_READ_DONE_MSB;
 					        reset_counter <= '1';
-					    else
-				             next_state <= START_READ_OPERATION;
-				         end if;
+				    end if;
 				WHEN WAIT_READ_DONE_MSB =>
 				    IF counter >= 510  THEN
 						next_state <= LOAD_MSB;
 						reset_counter <= '1';
-				    else
+					else
 				        next_state <= WAIT_READ_DONE_MSB;
 				    end if;
 				WHEN LOAD_MSB =>
 					next_state <= WAIT_READ_DONE_LSB;
 				WHEN WAIT_READ_DONE_LSB =>
+				 next_state <= WAIT_READ_DONE_LSB;
 				IF DONE_O'event AND DONE_O = '0' THEN
 				        next_state <= LOAD_LSB;
-					else 
-					   next_state <= WAIT_READ_DONE_LSB;
-					end if;			
+				end if;			
 		        WHEN others => 
 			END CASE;
 	END PROCESS nextstate;
 
 	output : PROCESS(present_state,counter)
 		BEGIN	
+		
 			CASE present_state IS
 				WHEN INIT =>
-				    MSG_I <= '0';
+				   MSG_I <= '0';
 				    STB_I <= '0';
 				    SRST <= '0';
 				    A_I <= addrAD2 & write_bit;
-				    D_I <= B"0000_0000";
-				WHEN RESET_ACTIVATE =>
+				     D_I <= B"0000_0000";
+				 When RESET_ACTIVATE =>
 					SRST <= '1';
 				WHEN RESET_DEACTIVATE =>
 					SRST <= '0';

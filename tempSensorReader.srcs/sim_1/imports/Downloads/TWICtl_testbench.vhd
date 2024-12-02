@@ -116,7 +116,7 @@ architecture behavior of TWI_testbench is
 
 
 										-- Second address write
-		waitclocks(SCL_sig, 9);			-- wait for transmission time
+		waitclocks(SCL_sig, 10);			-- wait for transmission time
 		SDA_sig <= '0';
 		waitclocks(SCL_sig, 1);			-- wait for ack time
 		SDA_sig <= 'H';
@@ -149,7 +149,7 @@ architecture behavior of TWI_testbench is
 		waitclocks(SCL_sig, 1);
 		SDA_sig <= 'H';
 		waitclocks(SCL_sig, 1);
-		SDA_sig <= 'H';
+		SDA_sig <= 'H';  -- change from H to 0
 		waitclocks(SCL_sig, 1);
 		SDA_sig <= '0';
 		waitclocks(SCL_sig, 1);
@@ -157,7 +157,7 @@ architecture behavior of TWI_testbench is
 		waitclocks(SCL_sig, 1);
 		SDA_sig <= '0';					-- LSB (lower byte)
 		waitclocks(SCL_sig, 1);
-		SDA_sig <= 'H';
+
 		
         wait; -- stop the process to avoid an infinite loop
 
@@ -167,7 +167,6 @@ architecture behavior of TWI_testbench is
     -- this is the component instantiation for the
     -- DUT - the device we are testing
     DUT : entity work.TWICtl(Behavioral)
-		generic map (CLOCKFREQ => 100) -- System clock in MHz
 		port map(MSG_I  => MSG_I_sig,  -- new message
                  STB_I  => STB_I_sig,  -- strobe
                  A_I    => A_I_sig,    -- address input bus
@@ -176,9 +175,8 @@ architecture behavior of TWI_testbench is
                  DONE_O => DONE_O_sig, -- done status signal
                  ERR_O  => ERR_O_sig,  -- error status
                  CLK    => clk_sig,    -- Input Clock
-                 SRST   => RESET_sig,  -- Reset
+                 SRST   => SRST_sig,  -- Reset
                  SDA    => SDA_sig,    --TWI SDA
                  SCL    => SCL_sig);   --TWI SCL
 											-- address write (write)
- 
 end behavior;

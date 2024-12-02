@@ -10,18 +10,22 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="3.333333333 ms"></ZoomStartTime>
-      <ZoomEndTime time="23.333333334 ms"></ZoomEndTime>
-      <Cursor1Time time="20.000000000 ms"></Cursor1Time>
+      <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
+      <ZoomEndTime time="30.001000001 ms"></ZoomEndTime>
+      <Cursor1Time time="0.000000000 ms"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="187"></NameColumnWidth>
-      <ValueColumnWidth column_width="136"></ValueColumnWidth>
+      <ValueColumnWidth column_width="131"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="20" />
+   <WVObjectSize size="18" />
    <wvobject fp_name="/TWI_testbench/CLK_sig" type="logic">
       <obj_property name="ElementShortName">CLK_sig</obj_property>
       <obj_property name="ObjectShortName">CLK_sig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TWI_testbench/SDA_sig" type="logic">
+      <obj_property name="ElementShortName">SDA_sig</obj_property>
+      <obj_property name="ObjectShortName">SDA_sig</obj_property>
    </wvobject>
    <wvobject fp_name="/TWI_testbench/SRST_sig" type="logic">
       <obj_property name="ElementShortName">SRST_sig</obj_property>
@@ -47,14 +51,6 @@
       <obj_property name="ElementShortName">SCL_sig</obj_property>
       <obj_property name="ObjectShortName">SCL_sig</obj_property>
    </wvobject>
-   <wvobject fp_name="/TWI_testbench/SDA_sig" type="logic">
-      <obj_property name="ElementShortName">SDA_sig</obj_property>
-      <obj_property name="ObjectShortName">SDA_sig</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TWI_testbench/START_sig" type="logic">
-      <obj_property name="ElementShortName">START_sig</obj_property>
-      <obj_property name="ObjectShortName">START_sig</obj_property>
-   </wvobject>
    <wvobject fp_name="/TWI_testbench/master_stimulus/START" type="logic">
       <obj_property name="ElementShortName">START</obj_property>
       <obj_property name="ObjectShortName">START</obj_property>
@@ -74,10 +70,6 @@
    <wvobject fp_name="/TWI_testbench/DATA_OUT_sig" type="array">
       <obj_property name="ElementShortName">DATA_OUT_sig[15:0]</obj_property>
       <obj_property name="ObjectShortName">DATA_OUT_sig[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TWI_testbench/addrAD2" type="array">
-      <obj_property name="ElementShortName">addrAD2[6:0]</obj_property>
-      <obj_property name="ObjectShortName">addrAD2[6:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/TWI_testbench/master_stimulus/counter" type="other">
       <obj_property name="ElementShortName">counter</obj_property>

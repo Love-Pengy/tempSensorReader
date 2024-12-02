@@ -16,6 +16,6 @@ Compiling package ieee.std_logic_unsigned
 Compiling package ieee.math_real
 Compiling architecture behavior of entity xil_defaultlib.clock_divider [clock_divider_default]
 Compiling architecture behavioral of entity xil_defaultlib.ADT_CSM [adt_csm_default]
-Compiling architecture behavioral of entity xil_defaultlib.TWICtl [\TWICtl(clockfreq=100)\]
+Compiling architecture behavioral of entity xil_defaultlib.TWICtl [twictl_default]
 Compiling architecture behavior of entity xil_defaultlib.twi_testbench
 Built simulation snapshot TWI_testbench_behav
