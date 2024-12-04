@@ -71,7 +71,7 @@ architecture Structural of ADT_toplevel is
 	-- state machine, and a clock divider for the 2 Hz clock, as well as any other
 	-- components required
 	
-	CLK_DIV : ENTITY work.clock_divider(behavior)
+	CLK_DIV : ENTITY work.clock_divider_1(behavior)
                  PORT MAP(mclk => SYS_CLK, sclk => slow_clk);
                  
 	LED17_R <= slow_clk;

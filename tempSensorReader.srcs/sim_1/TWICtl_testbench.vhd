@@ -43,7 +43,7 @@ architecture behavior of TWI_testbench is
     -- A_I   --address input bus
     -- D_I   --data input bus
 	
-	  CLK_DIV : ENTITY work.clock_divider(behavior)
+	  CLK_DIV : ENTITY work.clock_divider_1(behavior)
                  PORT MAP(mclk => CLK_sig, sclk => slow_clk);
 
 	master_stimulus : ENTITY work.ADT_CSM(Behavioral)
