@@ -1,52 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1733279820" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ADT_toplevel.dcp">
-  <File Type="PA-TCL" Name="ADT_toplevel.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="ADT_toplevel_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="ADT_toplevel_reports.tcl"/>
-  <File Type="RDS-RDS" Name="ADT_toplevel.vds"/>
-  <File Type="RDS-UTIL" Name="ADT_toplevel_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="ADT_toplevel_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="ADT_toplevel.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="ADT_toplevel_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="ADT_toplevel_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1733352463" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ADT_toplevel.dcp">
+  <File Type="PA-TCL" Name="SSD_toplevel.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="SSD_toplevel_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="SSD_toplevel_reports.tcl"/>
+  <File Type="RDS-RDS" Name="SSD_toplevel.vds"/>
+  <File Type="RDS-UTIL" Name="SSD_toplevel_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="SSD_toplevel_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="SSD_toplevel.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="SSD_toplevel_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="SSD_toplevel_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/imports/Downloads/ADT_CSM.vhd">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../frazierb2/Downloads/ADT_CSM.vhd"/>
-        <Attr Name="ImportTime" Val="1732038875"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/Downloads/clock_divider.vhd">
+    <File Path="$PSRCDIR/sources_1/ADT_CSM.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/Downloads/TWICtl.vhd">
+    <File Path="$PSRCDIR/sources_1/TWICtl.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../frazierb2/Downloads/TWICtl.vhd"/>
-        <Attr Name="ImportTime" Val="1732038876"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/Downloads/ADT_toplevel_skeleton.vhd">
+    <File Path="$PSRCDIR/sources_1/clock_divider_1.vhd">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/clock_divider_2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/temp_decoder.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/display_driver.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/SSD_toplevel.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/ADT_toplevel_skeleton.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/TWICtl_testbench.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="ADT_toplevel"/>
+      <Option Name="TopModule" Val="SSD_toplevel"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/sources_1/imports/Downloads/Nexys4DDR_Master_skeleton.xdc">
+    <File Path="$PSRCDIR/sources_1/Nexys4DDR_Master_skeleton.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

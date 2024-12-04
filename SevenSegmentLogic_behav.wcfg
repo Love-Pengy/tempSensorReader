@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="temp_decoder_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="temp_decoder" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1,843 ps"></ZoomStartTime>
+      <ZoomEndTime time="2,155 ps"></ZoomEndTime>
+      <Cursor1Time time="2,393 ps"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/temp_decoder/DATA_IN" type="array">
+      <obj_property name="ElementShortName">DATA_IN[15:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_IN[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/temp_decoder/DATA_OUT" type="array">
+      <obj_property name="ElementShortName">DATA_OUT[15:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_OUT[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/temp_decoder/RealT" type="other">
+      <obj_property name="ElementShortName">RealT</obj_property>
+      <obj_property name="ObjectShortName">RealT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/temp_decoder/IntegerT" type="other">
+      <obj_property name="ElementShortName">IntegerT</obj_property>
+      <obj_property name="ObjectShortName">IntegerT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/temp_decoder/TensT" type="other">
+      <obj_property name="ElementShortName">TensT</obj_property>
+      <obj_property name="ObjectShortName">TensT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/temp_decoder/ONEST" type="other">
+      <obj_property name="ElementShortName">ONEST</obj_property>
+      <obj_property name="ObjectShortName">ONEST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/temp_decoder/TENTHS" type="other">
+      <obj_property name="ElementShortName">TENTHS</obj_property>
+      <obj_property name="ObjectShortName">TENTHS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/temp_decoder/HUNDREDTHS" type="other">
+      <obj_property name="ElementShortName">HUNDREDTHS</obj_property>
+      <obj_property name="ObjectShortName">HUNDREDTHS</obj_property>
+   </wvobject>
+</wave_config>

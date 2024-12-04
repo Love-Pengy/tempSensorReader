@@ -4,18 +4,18 @@ USE IEEE.STD_LOGIC_1164.ALL;
 --generic (CLOCKFREQ : natural := 100);                    -- input CLK frequency in MHz
 ENTITY ADT_CSM IS
     PORT (
-      START : IN std_logic;  
-      RESET : IN std_logic; 
-      SRST : OUT std_logic;
-      DATA_OUT : OUT std_logic_vector(15 DOWNTO 0); 
-      CLK : IN std_logic; 
-      STB_I : OUT std_logic;
-      MSG_I : OUT std_logic; 
-      A_I : OUT std_logic_vector(7 DOWNTO 0);
-      D_I : OUT std_logic_vector(7 DOWNTO 0);
-      DONE_O : IN std_logic;
-      ERR_O : IN std_logic;
-      D_O : IN std_logic_vector(7 DOWNTO 0)
+		START : IN std_logic;  
+		RESET : IN std_logic; 
+		SRST : OUT std_logic;
+		DATA_OUT : OUT std_logic_vector(15 DOWNTO 0); 
+		CLK : IN std_logic; 
+		STB_I : OUT std_logic;
+		MSG_I : OUT std_logic; 
+		A_I : OUT std_logic_vector(7 DOWNTO 0);
+		D_I : OUT std_logic_vector(7 DOWNTO 0);
+		DONE_O : IN std_logic;
+		ERR_O : IN std_logic;
+		D_O : IN std_logic_vector(7 DOWNTO 0)
    ); 
 END ADT_CSM;
 

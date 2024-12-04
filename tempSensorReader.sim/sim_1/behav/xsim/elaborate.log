@@ -1,7 +1,7 @@
 Vivado Simulator v2024.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TWI_testbench_behav xil_defaultlib.TWI_testbench -log elaborate.log 
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot temp_decoder_behav xil_defaultlib.temp_decoder -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -11,11 +11,7 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
 Compiling package ieee.math_real
-Compiling architecture behavior of entity xil_defaultlib.clock_divider [clock_divider_default]
-Compiling architecture behavioral of entity xil_defaultlib.ADT_CSM [adt_csm_default]
-Compiling architecture behavioral of entity xil_defaultlib.TWICtl [twictl_default]
-Compiling architecture behavior of entity xil_defaultlib.twi_testbench
-Built simulation snapshot TWI_testbench_behav
+Compiling architecture behavioral of entity xil_defaultlib.temp_decoder
+Built simulation snapshot temp_decoder_behav

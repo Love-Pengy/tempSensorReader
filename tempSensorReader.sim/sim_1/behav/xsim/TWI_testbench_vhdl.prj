@@ -1,9 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../tempSensorReader.srcs/sources_1/ADT_CSM.vhd" \
-"../../../../tempSensorReader.srcs/sources_1/clock_divider.vhd" \
-"../../../../tempSensorReader.srcs/sources_1/TWICtl.vhd" \
-"../../../../tempSensorReader.srcs/sim_1/TWICtl_testbench.vhd" \
-
-# Do not sort compile order
-nosort
