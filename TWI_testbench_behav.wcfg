@@ -10,85 +10,93 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
-      <ZoomEndTime time="11.340000001 ms"></ZoomEndTime>
-      <Cursor1Time time="5.000000000 ms"></Cursor1Time>
+      <ZoomStartTime time="0.000005000 ms"></ZoomStartTime>
+      <ZoomEndTime time="26.740005001 ms"></ZoomEndTime>
+      <Cursor1Time time="15.000000000 ms"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="115"></NameColumnWidth>
-      <ValueColumnWidth column_width="60"></ValueColumnWidth>
+      <NameColumnWidth column_width="317"></NameColumnWidth>
+      <ValueColumnWidth column_width="214"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="18" />
-   <wvobject type="logic" fp_name="/TWI_testbench/CLK_sig">
+   <WVObjectSize size="20" />
+   <wvobject fp_name="/TWI_testbench/CLK_sig" type="logic">
       <obj_property name="ElementShortName">CLK_sig</obj_property>
       <obj_property name="ObjectShortName">CLK_sig</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/TWI_testbench/SRST_sig">
-      <obj_property name="ElementShortName">SRST_sig</obj_property>
-      <obj_property name="ObjectShortName">SRST_sig</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/TWI_testbench/MSG_I_sig">
-      <obj_property name="ElementShortName">MSG_I_sig</obj_property>
-      <obj_property name="ObjectShortName">MSG_I_sig</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/TWI_testbench/STB_I_sig">
-      <obj_property name="ElementShortName">STB_I_sig</obj_property>
-      <obj_property name="ObjectShortName">STB_I_sig</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/TWI_testbench/DONE_O_sig">
-      <obj_property name="ElementShortName">DONE_O_sig</obj_property>
-      <obj_property name="ObjectShortName">DONE_O_sig</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/TWI_testbench/ERR_O_sig">
-      <obj_property name="ElementShortName">ERR_O_sig</obj_property>
-      <obj_property name="ObjectShortName">ERR_O_sig</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/TWI_testbench/SCL_sig">
-      <obj_property name="ElementShortName">SCL_sig</obj_property>
-      <obj_property name="ObjectShortName">SCL_sig</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/TWI_testbench/SDA_sig">
-      <obj_property name="ElementShortName">SDA_sig</obj_property>
-      <obj_property name="ObjectShortName">SDA_sig</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/TWI_testbench/master_stimulus/START">
+   <wvobject fp_name="/TWI_testbench/master_stimulus/START" type="logic">
       <obj_property name="ElementShortName">START</obj_property>
       <obj_property name="ObjectShortName">START</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/TWI_testbench/A_I_sig">
+   <wvobject fp_name="/TWI_testbench/RESET_sig" type="logic">
+      <obj_property name="ElementShortName">RESET_sig</obj_property>
+      <obj_property name="ObjectShortName">RESET_sig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TWI_testbench/SRST_sig" type="logic">
+      <obj_property name="ElementShortName">SRST_sig</obj_property>
+      <obj_property name="ObjectShortName">SRST_sig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TWI_testbench/SCL_sig" type="logic">
+      <obj_property name="ElementShortName">SCL_sig</obj_property>
+      <obj_property name="ObjectShortName">SCL_sig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TWI_testbench/MSG_I_sig" type="logic">
+      <obj_property name="ElementShortName">MSG_I_sig</obj_property>
+      <obj_property name="ObjectShortName">MSG_I_sig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TWI_testbench/STB_I_sig" type="logic">
+      <obj_property name="ElementShortName">STB_I_sig</obj_property>
+      <obj_property name="ObjectShortName">STB_I_sig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TWI_testbench/DONE_O_sig" type="logic">
+      <obj_property name="ElementShortName">DONE_O_sig</obj_property>
+      <obj_property name="ObjectShortName">DONE_O_sig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TWI_testbench/ERR_O_sig" type="logic">
+      <obj_property name="ElementShortName">ERR_O_sig</obj_property>
+      <obj_property name="ObjectShortName">ERR_O_sig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TWI_testbench/SDA_sig" type="logic">
+      <obj_property name="ElementShortName">SDA_sig</obj_property>
+      <obj_property name="ObjectShortName">SDA_sig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TWI_testbench/slow_clk" type="logic">
+      <obj_property name="ElementShortName">slow_clk</obj_property>
+      <obj_property name="ObjectShortName">slow_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TWI_testbench/A_I_sig" type="array">
       <obj_property name="ElementShortName">A_I_sig[7:0]</obj_property>
       <obj_property name="ObjectShortName">A_I_sig[7:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/TWI_testbench/D_I_sig">
+   <wvobject fp_name="/TWI_testbench/D_I_sig" type="array">
       <obj_property name="ElementShortName">D_I_sig[7:0]</obj_property>
       <obj_property name="ObjectShortName">D_I_sig[7:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/TWI_testbench/D_O_sig">
+   <wvobject fp_name="/TWI_testbench/D_O_sig" type="array">
       <obj_property name="ElementShortName">D_O_sig[7:0]</obj_property>
       <obj_property name="ObjectShortName">D_O_sig[7:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/TWI_testbench/DATA_OUT_sig">
+   <wvobject fp_name="/TWI_testbench/DATA_OUT_sig" type="array">
       <obj_property name="ElementShortName">DATA_OUT_sig[15:0]</obj_property>
       <obj_property name="ObjectShortName">DATA_OUT_sig[15:0]</obj_property>
    </wvobject>
-   <wvobject type="other" fp_name="/TWI_testbench/master_stimulus/counter">
-      <obj_property name="ElementShortName">counter</obj_property>
-      <obj_property name="ObjectShortName">counter</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/TWI_testbench/master_stimulus/next_state">
-      <obj_property name="ElementShortName">next_state</obj_property>
-      <obj_property name="ObjectShortName">next_state</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/TWI_testbench/master_stimulus/present_state">
+   <wvobject fp_name="/TWI_testbench/master_stimulus/present_state" type="other">
       <obj_property name="ElementShortName">present_state</obj_property>
       <obj_property name="ObjectShortName">present_state</obj_property>
    </wvobject>
-   <wvobject type="other" fp_name="/TWI_testbench/DUT/state">
-      <obj_property name="ElementShortName">state</obj_property>
-      <obj_property name="ObjectShortName">state</obj_property>
+   <wvobject fp_name="/TWI_testbench/master_stimulus/next_state" type="other">
+      <obj_property name="ElementShortName">next_state</obj_property>
+      <obj_property name="ObjectShortName">next_state</obj_property>
    </wvobject>
-   <wvobject type="other" fp_name="/TWI_testbench/DUT/nstate">
-      <obj_property name="ElementShortName">nstate</obj_property>
-      <obj_property name="ObjectShortName">nstate</obj_property>
+   <wvobject fp_name="/TWI_testbench/master_stimulus/counter" type="other">
+      <obj_property name="ElementShortName">counter</obj_property>
+      <obj_property name="ObjectShortName">counter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TWI_testbench/master_stimulus/reset_counter" type="logic">
+      <obj_property name="ElementShortName">reset_counter</obj_property>
+      <obj_property name="ObjectShortName">reset_counter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TWI_testbench/master_stimulus/addrAD2" type="array">
+      <obj_property name="ElementShortName">addrAD2[6:0]</obj_property>
+      <obj_property name="ObjectShortName">addrAD2[6:0]</obj_property>
    </wvobject>
 </wave_config>

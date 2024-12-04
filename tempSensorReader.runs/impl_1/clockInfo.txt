@@ -1,7 +1,7 @@
 -------------------------------------
 | Tool Version : Vivado v.2024.1
-| Date         : Mon Dec  2 14:11:39 2024
-| Host         : Jake
+| Date         : Tue Dec  3 21:06:39 2024
+| Host         : GOSU
 | Design       : design_1
 | Device       : xc7a100t-csg324-1--
 -------------------------------------

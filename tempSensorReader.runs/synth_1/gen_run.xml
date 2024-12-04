@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1733166585" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ADT_toplevel.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="ADT_toplevel_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="ADT_toplevel.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="ADT_toplevel_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="ADT_toplevel_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="ADT_toplevel_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="ADT_toplevel.vds"/>
-  <File Type="REPORTS-TCL" Name="ADT_toplevel_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="ADT_toplevel_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1733277912" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ADT_toplevel.dcp">
   <File Type="PA-TCL" Name="ADT_toplevel.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="ADT_toplevel_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="ADT_toplevel_reports.tcl"/>
+  <File Type="RDS-RDS" Name="ADT_toplevel.vds"/>
+  <File Type="RDS-UTIL" Name="ADT_toplevel_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="ADT_toplevel_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="ADT_toplevel.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="ADT_toplevel_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="ADT_toplevel_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/Downloads/ADT_CSM.vhd">
@@ -71,9 +71,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

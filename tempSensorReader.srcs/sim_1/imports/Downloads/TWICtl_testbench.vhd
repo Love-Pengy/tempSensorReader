@@ -78,7 +78,7 @@ architecture behavior of TWI_testbench is
 
 		SDA_sig <= 'H';					-- MSB (upper byte)
 		waitclocks(SCL_sig, 1);	
-		SDA_sig <= '0';
+		SDA_sig <= 'H'; -- change from 0 to H
 		waitclocks(SCL_sig, 1);
 		SDA_sig <= 'H';
 		waitclocks(SCL_sig, 1);
@@ -114,8 +114,53 @@ architecture behavior of TWI_testbench is
 		waitclocks(SCL_sig, 1);
 		SDA_sig <= 'H';
 
-
+        
 										-- Second address write
+		waitclocks(SCL_sig, 10);			-- wait for transmission time
+		SDA_sig <= '0';
+		waitclocks(SCL_sig, 1);			-- wait for ack time
+		SDA_sig <= 'H';
+
+		SDA_sig <= 'H';					-- MSB (upper byte)
+		waitclocks(SCL_sig, 1);	
+		SDA_sig <= '0';
+		waitclocks(SCL_sig, 1);
+		SDA_sig <= '0'; -- change from H to 0
+		waitclocks(SCL_sig, 1);
+		SDA_sig <= '0';
+		waitclocks(SCL_sig, 1);
+		SDA_sig <= '0';
+		waitclocks(SCL_sig, 1);
+		SDA_sig <= 'H'; -- change from 0 to H
+		waitclocks(SCL_sig, 1);
+		SDA_sig <= '0';
+		waitclocks(SCL_sig, 1);
+		SDA_sig <= '0';					-- LSB
+		waitclocks(SCL_sig, 1);
+		SDA_sig <= 'H';					-- Release bus
+
+		
+		waitclocks(SCL_sig, 1);			
+		SDA_sig <= '0';					-- MSB (lower byte)
+		waitclocks(SCL_sig, 1);
+		SDA_sig <= 'H';
+		waitclocks(SCL_sig, 1);
+		SDA_sig <= '0';
+		waitclocks(SCL_sig, 1);
+		SDA_sig <= 'H';
+		waitclocks(SCL_sig, 1);
+		SDA_sig <= 'H';  
+		waitclocks(SCL_sig, 1);
+		SDA_sig <= '0';
+		waitclocks(SCL_sig, 1);
+		SDA_sig <= '0';
+		waitclocks(SCL_sig, 1);
+		SDA_sig <= '0';					-- LSB (lower byte)
+		waitclocks(SCL_sig, 1);
+        SDA_sig <= 'H';
+	
+	
+									-- Thrid address write
 		waitclocks(SCL_sig, 10);			-- wait for transmission time
 		SDA_sig <= '0';
 		waitclocks(SCL_sig, 1);			-- wait for ack time
@@ -157,8 +202,8 @@ architecture behavior of TWI_testbench is
 		waitclocks(SCL_sig, 1);
 		SDA_sig <= '0';					-- LSB (lower byte)
 		waitclocks(SCL_sig, 1);
+        SDA_sig <= 'H';
 
-		
         wait; -- stop the process to avoid an infinite loop
 
 	end process slave_stimulus;

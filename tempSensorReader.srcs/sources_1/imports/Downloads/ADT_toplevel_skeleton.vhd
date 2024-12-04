@@ -75,13 +75,13 @@ architecture Structural of ADT_toplevel is
                  PORT MAP(mclk => SYS_CLK, sclk => slow_clk);
                  
 	LED17_R <= slow_clk;
-	LED16_G <= ERR_O_sig;
+	LED16_G <= DONE_O_sig;
 	
 	ADT : ENTITY work.ADT_CSM(Behavioral)
 		PORT MAP(START => slow_clk, 
 		        RESET => RESET_sig, 
 		        SRST => SRST_sig,
-		        DATA_OUT => LED,  
+		        DATA_OUT => LED_sig,  
 		        CLK => SYS_CLK, 
 		        STB_I => STB_I_sig,
 				MSG_I => MSG_I_sig,
@@ -91,8 +91,9 @@ architecture Structural of ADT_toplevel is
 				ERR_O => ERR_O_sig, 
 				D_O => D_O_sig 
 				);
-	
+		
 	 TWICtl : entity work.TWICtl(Behavioral)
+	 generic map (CLOCKFREQ => 50)
 		port map(MSG_I  => MSG_I_sig,  -- new message
                  STB_I  => STB_I_sig,  -- strobe
                  A_I    => A_I_sig,    -- address input bus
@@ -104,6 +105,6 @@ architecture Structural of ADT_toplevel is
                  SRST   => SRST_sig,  -- Reset
                  SDA    => AD2_SDA,    --TWI SDA
                  SCL    => AD2_SCL);   --TWI SCL
-										
+	
+	LED <= LED_sig;				
 end Structural;
-

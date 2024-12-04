@@ -1,24 +1,24 @@
 #-----------------------------------------------------------
 # Vivado v2024.1 (64-bit)
-# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Dec  2 14:09:49 2024
-# Process ID: 44365
-# Current directory: /home/bee/Projects/tempSensorReader/tempSensorReader.runs/synth_1
-# Command line: vivado -log ADT_toplevel.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ADT_toplevel.tcl
-# Log file: /home/bee/Projects/tempSensorReader/tempSensorReader.runs/synth_1/ADT_toplevel.vds
-# Journal file: /home/bee/Projects/tempSensorReader/tempSensorReader.runs/synth_1/vivado.jou
-# Running On        :Jake
-# Platform          :Linuxmint
-# Operating System  :Linux Mint 22
-# Processor Detail  :Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz
-# CPU Frequency     :2799.987 MHz
-# CPU Physical cores:2
-# CPU Logical cores :4
-# Host memory       :12258 MB
-# Swap memory       :2147 MB
-# Total Virtual     :14406 MB
-# Available Virtual :10754 MB
+# Start of session at: Tue Dec  3 21:05:14 2024
+# Process ID: 12656
+# Current directory: C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader/tempSensorReader.runs/synth_1
+# Command line: vivado.exe -log ADT_toplevel.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ADT_toplevel.tcl
+# Log file: C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader/tempSensorReader.runs/synth_1/ADT_toplevel.vds
+# Journal file: C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader/tempSensorReader.runs/synth_1\vivado.jou
+# Running On        :GOSU
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :12th Gen Intel(R) Core(TM) i7-1260P
+# CPU Frequency     :2496 MHz
+# CPU Physical cores:12
+# CPU Logical cores :16
+# Host memory       :16774 MB
+# Swap memory       :18253 MB
+# Total Virtual     :35027 MB
+# Available Virtual :18688 MB
 #-----------------------------------------------------------
 source ADT_toplevel.tcl -notrace
