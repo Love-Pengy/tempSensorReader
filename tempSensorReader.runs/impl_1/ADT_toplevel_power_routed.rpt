@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Tue Dec  3 21:07:10 2024
+| Date             : Tue Dec  3 21:39:06 2024
 | Host             : GOSU running 64-bit major release  (build 9200)
 | Command          : report_power -file ADT_toplevel_power_routed.rpt -pb ADT_toplevel_power_summary_routed.pb -rpx ADT_toplevel_power_routed.rpx
 | Design           : ADT_toplevel
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.100        |
+| Total On-Chip Power (W)  | 0.099        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.003        |
+| Dynamic (W)              | 0.002        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.5         |
@@ -54,14 +54,14 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |        3 |       --- |             --- |
 | Slice Logic    |    <0.001 |      546 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      233 |     63400 |            0.37 |
+|   LUT as Logic |    <0.001 |      234 |     63400 |            0.37 |
 |   CARRY4       |    <0.001 |       45 |     15850 |            0.28 |
 |   Register     |    <0.001 |      162 |    126800 |            0.13 |
 |   Others       |     0.000 |       11 |       --- |             --- |
-| Signals        |    <0.001 |      283 |       --- |             --- |
+| Signals        |    <0.001 |      282 |       --- |             --- |
 | I/O            |    <0.001 |       22 |       210 |           10.48 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.100 |          |           |                 |
+| Total          |     0.099 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.018 |       0.003 |      0.015 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.017 |       0.002 |      0.015 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -140,8 +140,7 @@ Table of Contents
 +--------------+-----------+
 | Name         | Power (W) |
 +--------------+-----------+
-| ADT_toplevel |     0.003 |
-|   TWICtl     |     0.001 |
+| ADT_toplevel |     0.002 |
 +--------------+-----------+
 
 

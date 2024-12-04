@@ -31,7 +31,7 @@ ARCHITECTURE Behavioral OF ADT_CSM IS
 	BEGIN
 	
 		A_I <= addrAD2 & read_Bit;
-        D_I <= B"0000_0000";
+        D_I <= (OTHERS => '0');
 		
 		clocked : PROCESS(CLK, RESET, START, reset_counter)
 			BEGIN
@@ -81,11 +81,11 @@ ARCHITECTURE Behavioral OF ADT_CSM IS
 						next_state <= WAIT_BUS_FREE;
 					END IF;		
 				WHEN START_READ_OPERATION =>
-				    IF DONE_O = '1' THEN
-					        next_state <= WAIT_READ_DONE_MSB;
-					        reset_counter <= '1';
-					ELSIF ERR_O = '1' THEN
-							next_state <= WAIT_BUS_FREE;
+					IF ERR_O = '1' THEN
+						next_state <= WAIT_BUS_FREE;		
+				    ELSIF DONE_O = '1' THEN
+						next_state <= WAIT_READ_DONE_MSB;
+						reset_counter <= '1';
 					ELSE
 					   next_state <= START_READ_OPERATION;
 					END IF;	
@@ -95,14 +95,14 @@ ARCHITECTURE Behavioral OF ADT_CSM IS
 						reset_counter <= '1';
 				    ELSE
 				        next_state <= WAIT_READ_DONE_MSB;
-				    END if;
+				    END IF;
 				WHEN LOAD_MSB =>
 					next_state <= WAIT_READ_DONE_LSB;
 				WHEN WAIT_READ_DONE_LSB =>
-					IF DONE_O = '1' THEN
-						next_state <= LOAD_LSB;
-					ELSIF ERR_O = '1' THEN
+					IF ERR_O = '1' THEN
 						next_state <= WAIT_BUS_FREE;
+					ELSIF DONE_O = '1' THEN
+						next_state <= LOAD_LSB;
 					ELSE
 						next_state <= WAIT_READ_DONE_LSB;
 					END IF;						

@@ -3,10 +3,10 @@ use IEEE.std_logic_1164.all;
 
 ENTITY clock_divider is
 -- use these values for simulation -----
--- GENERIC(DIVISOR : positive := 500_000);
+ GENERIC(DIVISOR : positive := 500_000);
 ----------------------------------------
 -- use these values for synthesis ------
-  GENERIC(DIVISOR : positive := 50_000_000);
+--  GENERIC(DIVISOR : positive := 50_000_000);
 -----------------------------------------
   PORT(mclk : IN  std_logic;
        sclk : OUT std_logic);
