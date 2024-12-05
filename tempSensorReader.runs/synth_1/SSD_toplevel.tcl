@@ -57,6 +57,8 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -73,8 +75,8 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
   {C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader/tempSensorReader.srcs/sources_1/ADT_CSM.vhd}
-  {C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader/tempSensorReader.srcs/sources_1/TWICtl.vhd}
   {C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader/tempSensorReader.srcs/sources_1/clock_divider_1.vhd}
+  {C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader/tempSensorReader.srcs/sources_1/TWICtl.vhd}
   {C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader/tempSensorReader.srcs/sources_1/clock_divider_2.vhd}
   {C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader/tempSensorReader.srcs/sources_1/temp_decoder.vhd}
   {C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader/tempSensorReader.srcs/sources_1/display_driver.vhd}

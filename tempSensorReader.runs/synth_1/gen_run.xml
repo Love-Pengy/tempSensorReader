@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1733352463" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ADT_toplevel.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1733440432" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ADT_toplevel.dcp">
   <File Type="PA-TCL" Name="SSD_toplevel.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="SSD_toplevel_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="SSD_toplevel_reports.tcl"/>
@@ -17,13 +17,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/TWICtl.vhd">
+    <File Path="$PSRCDIR/sources_1/clock_divider_1.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/clock_divider_1.vhd">
+    <File Path="$PSRCDIR/sources_1/TWICtl.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -71,6 +71,7 @@
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="SSD_toplevel"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

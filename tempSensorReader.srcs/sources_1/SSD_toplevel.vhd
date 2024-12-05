@@ -26,6 +26,7 @@ entity SSD_toplevel is
            AD2_SCL     : inout	STD_LOGIC;
            AD2_SDA     : inout	STD_LOGIC;
            LED         : out	STD_LOGIC_VECTOR(15 downto 0);
+           SW : in STD_LOGIC_VECTOR(15 downto 0);
            SCL_ALT_IN  : inout	STD_LOGIC;
            SDA_ALT_IN  : inout	STD_LOGIC;
            LED16_G : out STD_LOGIC;
@@ -48,8 +49,8 @@ architecture Structural of SSD_toplevel is
 	signal D_I_sig    : STD_LOGIC_VECTOR (7 downto 0);
 	signal D_O_sig    : STD_LOGIC_VECTOR (7 downto 0);
 
-	signal LED_sig, DATA_sig  : STD_LOGIC_VECTOR (15 downto 0);
-
+	signal LED_sig  : STD_LOGIC_VECTOR (15 downto 0);
+    signal DATA_sig : STD_LOGIC_VECTOR (19 downto 0);
 ------------------------------------------------------------------------
 -- Implementation
 ------------------------------------------------------------------------
@@ -116,7 +117,8 @@ architecture Structural of SSD_toplevel is
 	
 	TEMPDECODER : entity work.temp_decoder(Behavioral)
 		port map(DATA_IN  => LED_sig,
-				DATA_OUT => DATA_sig);
+				DATA_OUT => DATA_sig,
+				SW2 => SW);
                  		
 	
 	 SEVENSEGMENTDISPLAY :  entity work.SevenSegmentLogic(Behavioral)   

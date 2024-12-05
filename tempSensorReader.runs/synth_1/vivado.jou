@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Wed Dec  4 17:47:46 2024
-# Process ID: 10944
+# Start of session at: Thu Dec  5 18:13:54 2024
+# Process ID: 23292
 # Current directory: C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader/tempSensorReader.runs/synth_1
 # Command line: vivado.exe -log SSD_toplevel.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SSD_toplevel.tcl
 # Log file: C:/Users/eoppo/Documents/VCU Engineering/Fall 2024/EGRE 365/Lab Vivado/FinalProject/tempSensorReader/tempSensorReader.runs/synth_1/SSD_toplevel.vds
@@ -19,6 +19,6 @@
 # Host memory       :16774 MB
 # Swap memory       :18253 MB
 # Total Virtual     :35027 MB
-# Available Virtual :18437 MB
+# Available Virtual :13792 MB
 #-----------------------------------------------------------
 source SSD_toplevel.tcl -notrace

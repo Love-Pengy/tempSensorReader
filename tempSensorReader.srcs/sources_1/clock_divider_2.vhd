@@ -6,7 +6,7 @@ ENTITY clock_divider_2 is
 -- GENERIC(DIVISOR : positive := 500_000);
 ----------------------------------------
 -- use these values for synthesis ------
-  GENERIC(DIVISOR : positive := 250_000);
+  GENERIC(DIVISOR : positive := 200_000);
 -----------------------------------------
   PORT(mclk : IN  std_logic;
        sclk : OUT std_logic);

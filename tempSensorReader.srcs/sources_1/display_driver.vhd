@@ -6,7 +6,7 @@ entity SevenSegmentLogic is
     Port (
         clk      : in  std_logic;
         rst    : in  std_logic;
-        DATA       : in  std_logic_vector(15 downto 0);
+        DATA       : in  std_logic_vector(19 downto 0);
         CA2, CB2, CC2, CD2, CE2, CF2, CG2 : out std_logic;  -- Cathode signals for segments
         AN2 : out std_logic_vector(7 downto 0);           -- Anode signals for digits
         DP2      : out std_logic                       -- Decimal point
@@ -66,10 +66,15 @@ begin
 					BCD_digits_temp := DATA(11 downto 8);
 					AN2 <= (2 => '0', others => '1');
                     digit_select <= 3;
-                when others =>
+                when 3 =>
                     BCD_digits <= DATA(15 downto 12);
 					BCD_digits_temp := DATA(15 downto 12);
 					AN2 <= (3 => '0', others => '1');
+                    digit_select <= 4;	
+                 when others =>
+                    BCD_digits <= DATA(19 downto 16);
+					BCD_digits_temp := DATA(19 downto 16);
+					AN2 <= (4 => '0', others => '1');
                     digit_select <= 0;	
             end case;
 

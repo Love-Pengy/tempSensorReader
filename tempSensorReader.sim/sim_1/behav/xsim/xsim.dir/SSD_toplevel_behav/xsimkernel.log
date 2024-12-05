@@ -1,0 +1,7 @@
+Running: xsim.dir/SSD_toplevel_behav/xsimk.exe -simmode gui -wdb SSD_toplevel_behav.wdb -simrunnum 0 -socket 57011
+Design successfully loaded
+Design Loading Memory Usage: 10592 KB (Peak: 10592 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 11136 KB (Peak: 11136 KB)
+Simulation CPU Usage: 0 ms
